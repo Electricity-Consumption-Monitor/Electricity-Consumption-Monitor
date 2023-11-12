@@ -1,0 +1,1 @@
+The main goal of this program is to calculates the electricity price bill via logically processing user inputs. 
