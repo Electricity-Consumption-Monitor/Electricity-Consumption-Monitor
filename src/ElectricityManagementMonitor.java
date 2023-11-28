@@ -4,10 +4,10 @@ import java.util.List;
 public class ElectricityManagementMonitor {
     private static ElectricityManagementMonitor instance;
 
-    private List<Building> buildings;
+    private List<ElectricityComponent> components;
 
     private ElectricityManagementMonitor() {
-        buildings = new ArrayList<>();
+        components = new ArrayList<>();
     }
 
     public static ElectricityManagementMonitor getInstance() {
@@ -17,6 +17,17 @@ public class ElectricityManagementMonitor {
         return instance;
     }
 
+    public void addComponent(ElectricityComponent component) {
+        components.add(component);
+    }
 
+    public double calculateTotalElectricityBill() {
+        double totalElectricityBill = 0.0;
+        for (ElectricityComponent component : components) {
+            totalElectricityBill += component.calculateTotalElectricityBill();
+        }
+        return totalElectricityBill;
+    }
+    
 
 }

@@ -1,3 +1,3 @@
 interface ElectricityComponent {
-
+    double calculateTotalElectricityBill();
 }
