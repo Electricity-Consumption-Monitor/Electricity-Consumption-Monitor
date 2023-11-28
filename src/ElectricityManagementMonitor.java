@@ -39,6 +39,17 @@ public class ElectricityManagementMonitor {
         Building building = new Building(buildingName);
 
 
-    }
+        System.out.print("Enter the number of rooms in " + buildingName + ": ");
+        int numberOfRooms = scanner.nextInt();
 
+
+        for (int roomNumber = 1; roomNumber <= numberOfRooms; roomNumber++) {
+            System.out.println("\nRoom " + roomNumber + ":");
+            Room room = new Room();
+
+            System.out.print("Enter the number of devices in this room: ");
+            int numberOfDevices = scanner.nextInt();
+            
+        }
+    }
     }
