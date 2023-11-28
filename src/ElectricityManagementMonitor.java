@@ -16,4 +16,7 @@ public class ElectricityManagementMonitor {
         }
         return instance;
     }
+
+
+
 }
