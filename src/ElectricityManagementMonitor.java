@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ElectricityManagementMonitor {
     private static ElectricityManagementMonitor instance;
@@ -28,6 +29,16 @@ public class ElectricityManagementMonitor {
         }
         return totalElectricityBill;
     }
-    
 
-}
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the name of the building: ");
+        String buildingName = scanner.nextLine();
+        Building building = new Building(buildingName);
+
+
+    }
+
+    }
