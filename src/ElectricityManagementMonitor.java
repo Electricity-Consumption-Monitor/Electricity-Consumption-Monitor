@@ -49,7 +49,30 @@ public class ElectricityManagementMonitor {
 
             System.out.print("Enter the number of devices in this room: ");
             int numberOfDevices = scanner.nextInt();
+
+            for (int deviceNumber = 1; deviceNumber <= numberOfDevices; deviceNumber++) {
+                System.out.println("\nDevice " + deviceNumber + ":");
+                scanner.nextLine(); // Consume the newline character
+
+                // Get device details
+                System.out.print("Enter the name of the device: ");
+                String deviceName = scanner.nextLine();
+
+                System.out.print("Enter how many hours the device works: ");
+                double hoursOfWork = scanner.nextDouble();
+
+                System.out.print("Enter how many Watts does it consume: ");
+                double wattsConsumed = scanner.nextDouble();
+
+                Device device = new Device(deviceName, hoursOfWork, wattsConsumed);
+                room.addDevice(device);
+            }
+
+            building.addRoom(room);
             
         }
+
+
+
     }
     }
