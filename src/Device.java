@@ -10,6 +10,7 @@ class Device {
         this.hoursOfWork = hoursOfWork;
         this.wattsConsumed = wattsConsumed;
     }
+
     
 
 }
