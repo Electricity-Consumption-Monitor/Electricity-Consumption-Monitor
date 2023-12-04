@@ -73,6 +73,16 @@ public class ElectricityManagementMonitor {
         }
 
 
+        BillingDecorator billingDecorator = new BillingDecorator(building);
+        getInstance().addComponent(billingDecorator);
+
+        double electricityBill = getInstance().calculateTotalElectricityBill();
+        System.out.println("\nTotal electricity bill for the entire system: $" + electricityBill);
+
+      
+        scanner.close();
+
+
 
     }
     }
