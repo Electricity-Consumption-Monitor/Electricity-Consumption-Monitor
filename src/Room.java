@@ -12,7 +12,7 @@ class Room implements ElectricityComponent  {
         devices.add(device);
     }
     @Override
-public double calculateTotalElectricityBill(){
+    public double calculateTotalElectricityBill(){
         double totalConsumption = 0.0;
         for (Device device: devices) {
             totalConsumption += device.calculateElectricityConsumption();

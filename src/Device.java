@@ -11,6 +11,9 @@ class Device {
         this.wattsConsumed = wattsConsumed;
     }
 
-    
+    public double calculateElectricityConsumption() {
+        double kilowattsConsumed = wattsConsumed / 1000;
+        return hoursOfWork * kilowattsConsumed;
+    }
 
 }
